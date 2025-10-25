@@ -1,90 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="My personal blog about tech, life, and learning." />
-  <title>My Blog | example.com.np</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background: #0052cc;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    article {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    article h2 {
-      margin-top: 0;
-      color: #0052cc;
-    }
-    article .date {
-      color: #777;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #f1f1f1;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggy Nepal - Discover Stories from Nepal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <h1>My Blog</h1>
-    <p>Thoughts, tutorials, and ideas ✍️</p>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>Bloggy Nepal</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <article>
-      <h2>Welcome to My Blog!</h2>
-      <p class="date">Published on October 25, 2025</p>
-      <p>
-        Hi there 👋 — This is a simple blog built with HTML and hosted on GitHub Pages.
-        I’ll share articles about web development, technology, and personal projects here.
-      </p>
-    </article>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Stories from the Heart of Nepal</h1>
+            <p>Explore culture, travel, food, and lifestyle through the eyes of local writers</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for articles...">
+                <button class="btn btn-primary"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
 
-    <article>
-      <h2>How I Deployed My Site Using GitHub Pages & Cloudflare</h2>
-      <p class="date">Published on October 20, 2025</p>
-      <p>
-        In this post, I explain how I connected my custom .np domain to GitHub Pages using Cloudflare DNS.
-        It’s surprisingly easy and secure once you know the steps!
-      </p>
-      <a href="#">Read more →</a>
-    </article>
-  </main>
+    <!-- Featured Posts -->
+    <section class="featured-posts">
+        <div class="container">
+            <h2 class="section-title">Featured Posts</h2>
+            <div class="featured-grid" id="featuredContainer">
+                <!-- Featured posts will be rendered here by JavaScript -->
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    © 2025 My Blog · Built with ❤️ using HTML + GitHub Pages
-  </footer>
+    <!-- Main Content -->
+    <main class="container">
+        <div class="content-wrapper">
+            <div class="blog-section">
+                <h2 class="section-title">Latest Articles</h2>
+                <div class="blog-grid" id="blogContainer">
+                    <!-- Blog posts will be rendered here by JavaScript -->
+                </div>
+            </div>
+            
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#">Travel <span>12</span></a></li>
+                        <li><a href="#">Food <span>8</span></a></li>
+                        <li><a href="#">Culture <span>15</span></a></li>
+                        <li><a href="#">Adventure <span>10</span></a></li>
+                        <li><a href="#">Lifestyle <span>7</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3>Popular Tags</h3>
+                    <div class="tags">
+                        <a href="#" class="tag">Kathmandu</a>
+                        <a href="#" class="tag">Himalayas</a>
+                        <a href="#" class="tag">Momos</a>
+                        <a href="#" class="tag">Trekking</a>
+                        <a href="#" class="tag">Festivals</a>
+                        <a href="#" class="tag">Heritage</a>
+                    </div>
+                </div>
+                
+                <div class="sidebar-widget newsletter-widget">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p>Get the latest articles directly in your inbox</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="logo">
+                    <i class="fas fa-mountain"></i>
+                    <span>Bloggy Nepal</span>
+                </div>
+                <p>Sharing authentic stories and experiences from Nepal.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Write for Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Food & Drink</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Adventure</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</li>
+                    <li><i class="fas fa-phone"></i> +977 985634567</li>
+                    <li><i class="fas fa-envelope"></i> info@bloggynepal.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Bloggy Nepal. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
