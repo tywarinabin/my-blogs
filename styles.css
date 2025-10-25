@@ -605,3 +605,31 @@ footer {
 .overlay.active {
     display: block;
 }
+
+/* Update the hamburger styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.hamburger .menu-icon {
+    display: block;
+}
+
+.hamburger .close-icon {
+    display: none;
+}
+
+.hamburger.active .menu-icon {
+    display: none;
+}
+
+.hamburger.active .close-icon {
+    display: block;
+}
+
+/* Remove auth-buttons related styles since we're not using them */
+.auth-buttons {
+    display: none;
+}

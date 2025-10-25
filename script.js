@@ -144,13 +144,13 @@ function renderBlogPosts() {
     });
 }
 
-// Toggle mobile navigation
+// Update the setupMobileNavigation function
 function setupMobileNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.createElement('div');
     mobileNav.className = 'mobile-nav';
     
-    // Create mobile navigation content
+    // Create mobile navigation content without auth buttons
     mobileNav.innerHTML = `
         <ul class="mobile-nav-links">
             <li><a href="#">Home</a></li>
@@ -159,15 +159,10 @@ function setupMobileNavigation() {
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <div class="mobile-auth-buttons">
-            <button class="btn btn-outline">Sign In</button>
-            <button class="btn btn-primary">Sign Up</button>
-        </div>
     `;
     
     document.body.appendChild(mobileNav);
     
-    // Create overlay
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
     document.body.appendChild(overlay);
@@ -184,7 +179,6 @@ function setupMobileNavigation() {
         overlay.classList.remove('active');
     });
 }
-
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     renderFeaturedPosts();
